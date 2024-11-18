@@ -3,7 +3,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        customMonserrat:['monserrat', 'sans-serif'],
+        customNunito:['nunito', 'sans-serif'],
+        customDancing:['dancing', 'cursive']
+      }
+    },
   },
   plugins: [],
 }
