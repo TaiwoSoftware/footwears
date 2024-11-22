@@ -1,19 +1,23 @@
+import AuthButtons from "./AuthButtons";
+import Logo from "./Logo";
+import illustration from "./illustrationMobille.jpg";
+import NavLinks from "./NavLinks";
 export const Navbar: React.FC = () => {
   return (
-      <div className="flex gap-4 items-center">
-        <div>
-          <h1 className="text-8xl text-black italic  font-customNunito font-extrabold">
-            F
-          </h1>
-        </div>
-        <div>
-          <div>
-            <h1 className="text-black text-3xl mb-1 -ml-9 italic font-customNunito font-extrabold">oots</h1>
-          </div>
-          <div>
-            <h1  className="text-black text-3xl  -ml-9  italic font-customNunito font-extrabold">inds</h1>
-          </div>
+    <>
+      <div className="relative">
+        <div className="bg-gray-950">
+          <img src={illustration} alt="shoes" className="w-full opacity-35" />
         </div>
       </div>
+
+      <div className="absolute top-0">
+        <div className="flex items-center gap-52 p-4 font-customNunito">
+          <Logo />
+          <NavLinks />
+          <AuthButtons />
+        </div>
+      </div>
+    </>
   );
 };
