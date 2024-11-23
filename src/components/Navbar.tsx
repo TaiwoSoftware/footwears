@@ -1,7 +1,8 @@
 import AuthButtons from "./AuthButtons";
 import Logo from "./Logo";
-import illustration from "./illustrationMobille.jpg";
+import illustration from "./images/illustrationMobille.jpg";
 import NavLinks from "./NavLinks";
+import HeaderContent from "./HeaderContent";
 export const Navbar: React.FC = () => {
   return (
     <>
@@ -17,6 +18,7 @@ export const Navbar: React.FC = () => {
           <NavLinks />
           <AuthButtons />
         </div>
+        <HeaderContent />
       </div>
     </>
   );
