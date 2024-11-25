@@ -1,8 +1,6 @@
-import AuthButtons from "./AuthButtons";
-import Logo from "./Logo";
 import illustration from "./images/illustrationMobille.jpg";
-import NavLinks from "./NavLinks";
 import HeaderContent from "./HeaderContent";
+import { NavContainer } from "./NavContainer";
 export const Navbar: React.FC = () => {
   return (
     <>
@@ -13,11 +11,7 @@ export const Navbar: React.FC = () => {
       </div>
 
       <div className="absolute top-0">
-        <div className="flex items-center gap-52 p-4 font-customNunito">
-          <Logo />
-          <NavLinks />
-          <AuthButtons />
-        </div>
+      <NavContainer />
         <HeaderContent />
       </div>
     </>
