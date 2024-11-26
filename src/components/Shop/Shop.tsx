@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import { ProductProps } from "./ProductInterface";
+// import { ProductProps } from "./ProductInterface";
 import blue from './ProductImages/bluesneaker.png'
 export const Shop:React.FC = () => {
-    let productArray:ProductProps[] = [
-        {
-            nameOfProduct:"Shoe",
-            ammountOfProduct:200
-        },
-    ]
+    // let productArray:ProductProps[] = [
+    //     {
+    //         nameOfProduct:"Shoe",
+    //         ammountOfProduct:200
+    //     },
+    // ]
   return (
     <div>
       <div className="bg-gray-100 min-h-screen font-customNunito">
