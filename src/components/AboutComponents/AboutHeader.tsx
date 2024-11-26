@@ -1,6 +1,6 @@
 import { NavContainer } from "../NavContainer"
 
-export const AboutHeader = () => {
+export const AboutHeader:React.FC = () => {
   return (
     <div>
         <div className="bg-black">

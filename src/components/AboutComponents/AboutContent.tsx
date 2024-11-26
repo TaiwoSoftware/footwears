@@ -1,4 +1,5 @@
 // import { motion } from "framer-motion";
+import { AboutRemainingContent } from "./AboutRemainingContent";
 import aboutImage from "./image/black.jpg";
 export const AboutContent: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ export const AboutContent: React.FC = () => {
           </p>
         </div>
       </div>
+      <AboutRemainingContent />
     </div>
   );
 };
