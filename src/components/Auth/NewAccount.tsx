@@ -3,8 +3,40 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import loginImage from "./AuthImage/mainlog.jpeg";
 import { motion } from "framer-motion";
+import {useState } from "react";
 
-export const NewAccount = () => {
+export const NewAccount:React.FC = () => {
+    const [value, setValue] = useState<string | undefined>("")
+    const [email, setEmail] = useState<string | undefined>("")
+    const [phoneNumber, setPhoneNumber] = useState<number | undefined>(0)
+    const [password, setPassword] = useState<string | undefined>("")
+    const [confirmPassword, setConfirmPassword] = useState<string | undefined> ("")
+    const handleChange = (e:React.ChangeEvent<HTMLInputElement>):void => {
+        setValue(e.target.value)
+    }
+
+    const handleEmail = (e:React.ChangeEvent<HTMLInputElement>) :void => {
+        setEmail(e.target.value)
+    }
+
+    const handlePhoneNumber = (e:React.ChangeEvent<HTMLInputElement>):void => {
+        setPhoneNumber(parseInt(e.target.value))
+    }
+    const handlePassword = (e:React.ChangeEvent<HTMLInputElement>):void => {
+        setPassword(e.target.value);
+    }
+    const handleConfirmPassword = (e:React.ChangeEvent<HTMLInputElement>):void =>{
+        setConfirmPassword(e.target.value);
+        if(password === confirmPassword) {
+            console.log("matched password");
+            
+        } else {
+            console.log("not matched");
+            
+        }
+        
+        
+    }
   return (
     <div>
       <div className="bg-black">
@@ -41,6 +73,9 @@ export const NewAccount = () => {
                 <input
                   type="text"
                   id="full-name"
+                  required
+                  value={value}
+                  onChange={handleChange}
                   placeholder="Enter your full name"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2"
                 />
@@ -56,8 +91,28 @@ export const NewAccount = () => {
                 </label>
                 <input
                   type="email"
+                  value={email}
+                  onChange={handleEmail}
+                  required
                   id="email"
                   placeholder="Enter your email"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="password"
+                  className="block text-gray-700 font-bold mb-2"
+                >
+                  Phone number
+                </label>
+                <input
+                  type="number"
+                  required
+                  value={phoneNumber}
+                  onChange={handlePhoneNumber}
+                  id="phoneNumber"
+                  placeholder="Your phone number"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2"
                 />
               </div>
@@ -72,6 +127,9 @@ export const NewAccount = () => {
                 </label>
                 <input
                   type="password"
+                  required
+                  value={password}
+                  onChange={handlePassword}
                   id="password"
                   placeholder="Create a password"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2"
@@ -89,6 +147,9 @@ export const NewAccount = () => {
                 <input
                   type="password"
                   id="confirm-password"
+                  required
+                  value={confirmPassword}
+                  onChange={handleConfirmPassword}
                   placeholder="Confirm your password"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2"
                 />
